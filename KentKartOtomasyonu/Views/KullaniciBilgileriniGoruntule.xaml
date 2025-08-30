@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KentKartOtomasyonu.Views.KullaniciBilgileriniGoruntule">
+
+    <Grid>
+        <!-- Background Image with overlay -->
+        <Image Source="userprofile.png" Aspect="AspectFill" Opacity="0.3" HeightRequest="999"/>
+
+        <!-- Content container -->
+        <Frame Margin="20"
+               CornerRadius="20"
+               BackgroundColor="{AppThemeBinding Light=#f5f5f5, Dark=#333333}"
+               BorderColor="{AppThemeBinding Light=#e0e0e0, Dark=#444444}"
+               Padding="0">
+
+            <ScrollView>
+                <StackLayout Spacing="15" Padding="20">
+                    <!-- Profile Header -->
+                    <StackLayout HorizontalOptions="Center" Spacing="10">
+                        <Image Source="profile_icon.png" 
+                               HeightRequest="80" 
+                               WidthRequest="80"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Center">
+                            <Image.Clip>
+                                <EllipseGeometry Center="40,40" RadiusX="40" RadiusY="40"/>
+                            </Image.Clip>
+                        </Image>
+                        <Label Text="Kullanıcı Bilgileri" 
+                               FontSize="24" 
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+
+                    <!-- User Information Cards -->
+                    <Frame BackgroundColor="{AppThemeBinding Light=#ffffff, Dark=#424242}"
+                           CornerRadius="12"
+                           Padding="15"
+                           HasShadow="True">
+                        <VerticalStackLayout Spacing="12">
+                            <!-- ID -->
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="ID:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding Id}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Name -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Ad:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding Ad}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Surname -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Soyad:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding Soyad}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Kent Kart ID -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Kent Kart ID:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding KentKartId}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Authorization -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Yetki:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding Yetki}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Phone -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Telefon No:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding TelefonNo}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Balance -->
+                            <BoxView HeightRequest="1" 
+                                     Color="{AppThemeBinding Light=#eeeeee, Dark=#555555}"/>
+                            <HorizontalStackLayout Spacing="5">
+                                <Label Text="" 
+                                       FontFamily="FontAwesome"
+                                       FontSize="18"
+                                       VerticalOptions="Center"/>
+                                <Label Text="Bakiye:" 
+                                       FontSize="18"
+                                       VerticalOptions="Center"
+                                       WidthRequest="120"/>
+                                <Label Text="{Binding Bakiye}" 
+                                       FontSize="18"
+                                       FontAttributes="Bold"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Action Buttons -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                        <Button Text="Düzenle" 
+                                CornerRadius="10"
+                                BackgroundColor="#4CAF50"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                HeightRequest="45"
+                                Clicked="Button_Clicked_1"/>
+                        <Button Text="Sil" 
+                                CornerRadius="10"
+                                BackgroundColor="#F44336"
+                                TextColor="White"
+                                FontAttributes="Bold"
+                                Grid.Column="1"
+                                HeightRequest="45"
+                                Clicked="Button_Clicked_2"/>
+                    </Grid>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KentKartOtomasyonu.Views.AdminPaneli">
+    <Grid>
+        <Image Source="https://picsum.photos/2000/2000" WidthRequest="960"/>
+
+        <Frame BackgroundColor="#562b1a" Opacity="0.2"/>
+        <Frame VerticalOptions="Center" HorizontalOptions="Start" HeightRequest="735" CornerRadius="0" WidthRequest="350" BackgroundColor="#bfbdc0" Opacity="0.5"></Frame>
+        <Frame VerticalOptions="Center" HorizontalOptions="End" HeightRequest="735" CornerRadius="0" WidthRequest="350" BackgroundColor="#bfbdc0" Opacity="0.5"></Frame>
+        <Frame VerticalOptions="Start" HorizontalOptions="Center" HeightRequest="20" WidthRequest="1600" CornerRadius="0" BackgroundColor="#562b1a" Opacity="0.9"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="280" HeightRequest="280" Margin="25" BackgroundColor="SeaGreen" Opacity="0.5"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="200" Margin="60,40"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="200" Margin="60,280"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="200" Margin="40,60"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" HeightRequest="200" Margin="285,60"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="330" Margin="10,314"/>
+        <Frame VerticalOptions="End" HorizontalOptions="Start" WidthRequest="330" Margin="10,359"/>
+        
+        <Label Text="Bu Admin Panelidir" VerticalOptions="End" HorizontalOptions="Start" Margin="100,320" TextColor="Red" FontAttributes="Bold"/>
+        <Image Source="{Binding ProfilResmi }" Aspect="AspectFill" VerticalOptions="Start"  HeightRequest="220" WidthRequest="220" HorizontalOptions="Start" Margin="50,50">
+
+            <Image.Shadow>
+                <Shadow Brush="Black"
+                Offset="10,10"
+                Opacity="0.8" />
+            </Image.Shadow>
+        </Image>
+
+        <Button x:Name="button1" VerticalOptions="Start" HorizontalOptions="Start" WidthRequest="250" Margin="40,323" BackgroundColor="#cb8a58" Text="Kullanıcılar" FontAttributes="Bold" Clicked="button1_Clicked_1"/>
+        <Button x:Name="button2" VerticalOptions="End" HorizontalOptions="Start" WidthRequest="250" Margin="40,20" BackgroundColor="#cb8a58" Text="Çıkış Yap" FontAttributes="Bold" Clicked="button2_Clicked_1"/>
+
+
+    </Grid>
+</ContentPage>

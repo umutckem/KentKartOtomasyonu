@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KentKartOtomasyonu.Views.Hakkında">
+
+    <Grid>
+        <!-- Arka Plan Resmi -->
+        <Image Source="https://picsum.photos/2200/2200" 
+               Aspect="AspectFill" 
+               WidthRequest="2200" 
+               HeightRequest="2200"/>
+
+        <!-- Siyah yarı saydam katman (okunabilirlik için) -->
+        <BoxView BackgroundColor="Black" 
+                 Opacity="0.4"
+                 HorizontalOptions="Fill" 
+                 VerticalOptions="Fill" />
+
+        <!-- İçerik Çerçevesi -->
+        <Frame VerticalOptions="Start" 
+               HorizontalOptions="Center" 
+               WidthRequest="1000" 
+               HeightRequest="600" 
+               BackgroundColor="White" 
+               Opacity="0.7"
+               Padding="20"
+               HasShadow="True">
+
+            <!-- İçerik StackLayout ile daha derli toplu -->
+            <StackLayout>
+                <Label Text="OTOMASYON HAKKINDA VİZYON VE AMAÇLAR"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="Black"
+                       Margin="0,10"/>
+
+                <Label Text="KenKart Otomasyonu, toplu taşıma sistemlerinde kullanılan kartların yönetimini kolaylaştırmak için geliştirilen bir projedir. Bu sistem, kart sahiplerinin bakiye yükleme, bakiye transferi ve giriş işlemlerini dijital ortamda hızlı ve güvenli bir şekilde yapmalarına olanak tanır. Kullanıcılar, bakiye yükleme işlemiyle kartlarına para aktarabilir, bakiye transferi ile kartlar arasında bakiye aktarımı gerçekleştirebilir ve giriş işlemleri ile sistem üzerinden kolayca toplu taşıma hizmetlerinden yararlanabilir."
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"/>
+            </StackLayout>
+
+        </Frame>
+    </Grid>
+</ContentPage>

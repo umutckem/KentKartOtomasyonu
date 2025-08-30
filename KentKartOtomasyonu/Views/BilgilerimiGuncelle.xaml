@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KentKartOtomasyonu.Views.BilgilerimiGuncelle"
+             Loaded="ContentPage_Loaded">
+    <Grid>
+        
+        <Image Source="kayitol.png" Aspect="AspectFill"/>
+        <Frame VerticalOptions="Start" HorizontalOptions="Center" WidthRequest="400" HeightRequest="400" Margin="0,100" BackgroundColor="#b29f91" Opacity="0.3"/>
+        <Entry x:Name="profilResmi" WidthRequest="250" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,150" Placeholder="Profil Resmi Url"/>
+        <Entry x:Name="tekrarProfilResmi" WidthRequest="250" VerticalOptions="Start" HorizontalOptions="Center" Margin="0,200" Placeholder="Tekrar Profil Resmi Url"/>
+        <Button x:Name="guncelle" WidthRequest="250" VerticalOptions="Center" Text="Guncelle" Background="#cb8a58" FontFamily="Cascadia Code" Clicked="guncelle_Clicked"/>
+        
+    </Grid>
+</ContentPage>

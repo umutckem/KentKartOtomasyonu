@@ -1,0 +1,55 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KentKartOtomasyonu.Views.KullaniciBilgileri"
+             Loaded="ContentPage_Loaded_1">
+
+    <Grid>
+        <Image Source="kullanicilar.png" HeightRequest="1000" Aspect="AspectFill"/>
+
+        <VerticalStackLayout Padding="10" Margin="10">
+
+            <!-- Arama Kutusu -->
+            <SearchBar x:Name="SearchBarKullanici" Placeholder="Kullanıcı ara..."
+                       TextChanged="SearchBarKullanici_TextChanged"
+                       BackgroundColor="#393E46"
+                       TextColor="White" 
+                       PlaceholderColor="Gray"/>
+
+            <!-- Liste -->
+            <CollectionView x:Name="CollectionViewKullanici"
+                            HeightRequest="500" SelectionMode="Single" 
+                            SelectionChanged="CollectionViewKullanici_SelectionChanged_1">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Frame BorderColor="#00ADB5" CornerRadius="20" Padding="20" Margin="10"
+                                   BackgroundColor="#222831">
+                                <Grid ColumnDefinitions="100, *" RowDefinitions="Auto, Auto, Auto" RowSpacing="8">
+
+                                    <Label Text="ID:" TextColor="#00ADB5" FontAttributes="Bold"
+                                           Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Id}" TextColor="White"
+                                           Grid.Row="0" Grid.Column="1"/>
+
+                                    <Label Text="Ad:" TextColor="#00ADB5" FontAttributes="Bold"
+                                           Grid.Row="1" Grid.Column="0"/>
+                                    <Label Text="{Binding Ad}" TextColor="White"
+                                           Grid.Row="1" Grid.Column="1"/>
+
+                                    <Label Text="Soyad:" TextColor="#00ADB5" FontAttributes="Bold"
+                                           Grid.Row="2" Grid.Column="0"/>
+                                    <Label Text="{Binding Soyad}" TextColor="White"
+                                           Grid.Row="2" Grid.Column="1"/>
+
+                                </Grid>
+                            </Frame>
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+        <Button VerticalOptions="End" HorizontalOptions="Center" Margin="0,100" WidthRequest="150" Text="Ana Menü" FontAttributes="Bold" BackgroundColor="#4CAF50" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>
