@@ -124,3 +124,10 @@ Proje hakkında sorularınız için lütfen iletişime geçin.
 ---
 
 **Not**: Bu uygulama beta aşamasındadır ve geliştirme sürecinde olabilir.
+
+## Ekran Görüntüsü
+
+<img width="1028" height="837" alt="image" src="https://github.com/user-attachments/assets/497273ac-5b15-4e44-b9f7-8bbe2651a83e" />
+
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d0d939d0-6b77-4812-9410-f3bacbd84e03" />
+
